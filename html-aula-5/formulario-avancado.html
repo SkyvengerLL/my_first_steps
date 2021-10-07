@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+      <title>Formulario</title>
+   </head>
+   <body>
+      <main>
+         <h1>Cadastro de Usuário</h1>
+         <form>
+            <fieldset>
+               <legend>Informações Cadastrais:</legend>
+               <p>
+                  <label for="email">Email do Jogador: </label>
+                  <input type="email" id="email" />
+               </p>
+               <p>
+                  <label for="senha">Senha: </label>
+                  <input type= "password" id="senha" />
+               </p>
+               <p>
+                  <label for="consenha">Confirmar Senha: </label>
+                  <input type= "password" id="consenha" />
+               </p>
+            </fieldset>
+            <br />
+            <fieldset>
+               <legend>Informações opcionais:</legend>
+               <p>
+                  <label for="idade">Data de Nascimento</label>
+                  <input type="date" id="idade" />
+               </p>
+            </fieldset>
+            <br />
+            <fieldset>
+               <legend>Experiência:</legend>
+               <p>Quais TTRPGs você já jogou?</p>
+               <p>
+                  <label for="adnd" class ="checkbox-inline"><input type="checkbox" id="adnd" />Advenced Dungeons and Dragons</label>
+                  <label for="dnd3" class ="checkbox-inline"><input type="checkbox" id="dnd3" />Dungeons and Dragons 3E( ou 3.5E)</label>
+                  <label for="dnd4" class ="checkbox-inline"> <input type="checkbox" id="dnd4" /> Dungeons and Dragons 4E</label>
+               </p>
+               <p>
+                  <label for="dnd5" class ="checkbox-inline"><input type="checkbox" id="dnd5" /> Dungeons and Dragons 5E</label>
+                  <label for="gurps" class ="checkbox-inline"><input type="checkbox" id="gurps" />GURPS</label>
+                  <label for="genesys" class ="checkbox-inline"><input type="checkbox" id="genesys" />Genesys</label>
+               </p>
+               <p>
+                  <label for="pathfinder" class ="checkbox-inline"><input type="checkbox" id="pathfinder" />Pathfinder</label>
+                  <label for="pathfinder2" class ="checkbox-inline"><input type="checkbox" id="pathfinder2" />Pathfinder 2</label>
+                  <label for="callofcthulhu" class ="checkbox-inline"><input type="checkbox" id="callofcthulhu" />Call of Cthulhu</label>
+               </p>
+               <p>
+                  <label for="outros" class ="checkbox-inline"><input type="checkbox" id="outros" />Outros: <input type="text" /></label>
+               </p>
+               <br />
+               <p>Quais TTRPGs você já Narrou (mestrou, ou etc)?</p>
+               <p>
+                  <label for="madnd" class ="checkbox-inline"><input type="checkbox" id="madnd" />Advenced Dungeons and Dragons</label>
+                  <label for="mdnd3" class ="checkbox-inline"><input type="checkbox" id="mdnd3" />Dungeons and Dragons 3E( ou 3.5E)</label>
+                  <label for="mdnd4" class ="checkbox-inline"> <input type="checkbox" id="mdnd4" /> Dungeons and Dragons 4E</label>
+               </p>
+               <p>
+                  <label for="mdnd5" class ="checkbox-inline"><input type="checkbox" id="mdnd5" /> Dungeons and Dragons 5E</label>
+                  <label for="mgurps" class ="checkbox-inline"><input type="checkbox" id="mgurps" />GURPS</label>
+                  <label for="mgenesys" class ="checkbox-inline"><input type="checkbox" id="mgenesys" />Genesys</label>
+               </p>
+               <p>
+                  <label for="mpathfinder" class ="checkbox-inline"><input type="checkbox" id="mpathfinder" />Pathfinder</label>
+                  <label for="mpathfinder2" class ="checkbox-inline"><input type="checkbox" id="mpathfinder2" />Pathfinder 2</label>
+                  <label for="mcallofcthulhu" class ="checkbox-inline"><input type="checkbox" id="mcallofcthulhu" />Call of Cthulhu</label>
+               </p>
+               <p>
+                  <label for="moutros" class ="checkbox-inline"><input type="checkbox" id="moutros" />Outros: <input type="text" /></label>
+               </p>
+            </fieldset>
+            <input type="checkbox" id="termos" />
+            <label for="termos">Li e concordo com nossos temos de uso</label>
+            <br />
+            <br />
+            <br />
+
+            <input type="submit" value="salvar"/>
+            <input type="reset" value="resetar"/>
+         </form>
+      </main>
+   </body>
+</html>

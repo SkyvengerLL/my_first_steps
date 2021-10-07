@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+      <title>Formulario</title>
+   </head>
+   <body>
+      <main>
+         <h1>Construção de Personagem</h1>
+         <form>
+            <p>
+               <label for="email">Email do Jogador: </label>
+               <input type="email" id="email" />
+            </p>
+            <p>
+               <label for="senha">Senha: </label>
+               <input type= "password" id="senha" />
+            </p>
+            <p>
+               <label for="nome">Nome do personagem: </label>
+               <input type="text" id="nome" />
+            </p>
+            <p>
+               <label for="nascimento">Data de Nascimento do Personagem:</label>
+               <input type="date" id="nascimento" />
+            </p>
+            <p>Selecione o Arquétipo do personagem:</p>
+            <input type="radio" id="carismatico" name="arquetipo" value="carismatico">
+            <label for="carismatico">Carismático</label><br />
+            <input type="radio" id="escorregadio" name="arquetipo" value="escorregadio">
+            <label for="escorregadio">Escorregadio</label><br />
+            <input type="radio" id="intelectual" name="arquetipo" value="intelectual">
+            <label for="intelectual">Intelectual</label><br />
+            <input type="radio" id="mediano" name="arquetipo" value="mediano">
+            <label for="mediano">Mediano</label><br />
+            <input type="radio" id="mentalista" name="arquetipo" value="mentalista">
+            <label for="mentalista">Mentalista</label><br />
+            <input type="radio" id="teimoso" name="arquetipo" value="teimoso">
+            <label for="teimoso">Teimoso</label><br />
+            <input type="radio" id="trabalhador" name="arquetipo" value="trabalhador">
+            <label for="trabalhador">Trabalhador</label><br />
+            <br />
+            <p>Selecione a Carreira do personagem:</p>
+            <input type="radio" id="capelao" name="carreira" value="capelao">
+            <label for="capelao">Capelão</label><br />
+            <input type="radio" id="cientista" name="carreira" value="cientista">
+            <label for="cientista">Cientista</label><br />
+            <input type="radio" id="mecanico" name="carreira" value="mecanico">
+            <label for="mecanico">Mecânico</label><br />
+            <input type="radio" id="militar" name="carreira" value="militar">
+            <label for="militar">Militar</label><br />
+            <input type="radio" id="piloto" name="carreira" value="piloto">
+            <label for="piloto">Piloto</label><br />
+            <input type="radio" id="tecnico" name="carreira" value="tecnico">
+            <label for="tecnico">Tecnico</label><br />
+            <input type="radio" id="medico" name="carreira" value="medico">
+            <label for="medico">Médico</label><br />
+
+            <br />
+            <p>Selecione o tempo de experiência do personagem</p>
+            <label for="experiencia">Anos (0-5): </label>
+            <Input type="range" id="experiencia" min="0" max="5" />
+            <br />
+            <br />
+            <input type="checkbox" id="termos" />
+            <label for="termos">Li e concordo com nossos temos de uso</label>
+            <br />
+            <br />
+            <br />
+
+            <input type="submit" value="salvar"/>
+            <input type="reset" value="resetar"/>
+         </form>
+      </main>
+   </body>
+</html>
