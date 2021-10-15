@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+      <title>Máquina de Estados Finitos</title>
+   </head>
+   <body>
+      <h1><strong>Definição Formal de um Autômato (Máquina de Estados Finitos)</strong></h1>
+      <h3><strong>Definição de máquina de estados finita</strong></h3>
+      <p>Um autômato determinístico finito é representado formalmente por uma 5-tupla (Q,Σ,δ,q0,F), onde:</p>
+      <ul>
+         <li>Q é um conjunto finito de <strong>estados</strong></li>
+         <li>Σ é um conjunto finito de símbolos, chamado de alfabeto do autômato</li>
+         <li>δ é a <strong>função de transição</strong>, isto é, δ: Q x Σ → Q.</li>
+         <li>q0 é o estado inicial, isto é, o estado do autômato antes de qualquer entrada ser processada, onde q0 ∈ Q.</li>
+         <li>F é um conjunto de estados de Q (isto é, F ⊆ Q) chamado de <strong>estados de aceitação</strong>.</li>
+      </ul>
+      <h3><strong>Palavra de entrada</strong></h3>
+      <p>Um autômato lê uma string (cadeia de caracteres) finita de símbolos a1,a2,...., an, onde ai ∈ Σ, que é chamada de palavra de entrada. O conjunto de todas as palavras é denotado por Σ*.</p>
+      <h3><strong>Execução</strong></h3>
+      <p>A execução de um autômato sobre uma palavra de entrada w = a1,a2,...., an ∈ Σ*, é uma sequência de estados q0, q1,q2,...., qn, onde qi ∈ Q tal que q0 é o estado inicial e qi = δ(qi-1,ai) para 0 < i ≤ n. Em outras palavras, no começo o autômato está no estado inicial q0, e então o autômato lê símbolos da palavra de entrada sequencialmente. Quando o autômato lê o símbolo ai ele pula para o estado qi = δ(qi-1,ai). Diz-se que qn é o estado final da execução.</p>
+      <h3><strong>Palavra de aceitação</strong></h3>
+      <p>Uma palavra w ∈ Σ* é aceita pelo autômato se qn ∈ F.</p>
+      <h3><strong>Linguagem reconhecida</strong></h3>
+      <p>Um autômato pode reconhecer uma linguagem formal. A linguagem L ⊆ Σ* reconhecida por um autômato é o conjunto de todas as palavras que são aceitas pelo autômato.</p>
+      <h3><strong>Linguagens reconhecíveis</strong></h3>
+      <p>As linguagens reconhecíveis são o conjunto de linguagens que são reconhecidas por algum autômato. Para a definição acima de autômatos, as linguagens reconhecíveis são linguagens regulares. Para diferentes definições de autômatos, a definição de linguagens reconhecíveis é diferente.</p>
+      <h3><strong>Exemplo de uma Máquina de Estados Finitos</strong></h3>
+      <svg width="500" height="230">
+         <defs>
+            <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+               <polygon points="0 0, 4 3.5, 0 7" />
+            </marker>
+         </defs>
+         <line x1="0" y1="75" x2="35" y2="75" stroke="#000" stroke-width="4" marker-end="url(#arrowhead)" />
+         <circle cx="95" cy="75" r="40" stroke="black" stroke-width="4" fill="yellow" />
+         <circle cx="95" cy="75" r="31" stroke="black" stroke-width="4" fill="yellow" />
+         <path d="M 75 120 C 50 200, 150 200, 120 135" stroke="black" fill="transparent" stroke-width="4" marker-end="url(#arrowhead)" />
+         <path d="M 125 30 C 150 25, 200 25, 230 30" stroke="black" fill="transparent" stroke-width="4" marker-end="url(#arrowhead)" />
+         <circle cx="275" cy="75" r="40" stroke="black" stroke-width="4" fill="yellow" />
+         <path d="M 230 105 C 200 150, 150 125, 140 115" stroke="black" fill="transparent" stroke-width="4" marker-end="url(#arrowhead)" />
+         <path d="M 255 120 C 235 200, 325 200, 300 130" stroke="black" fill="transparent" stroke-width="4" marker-end="url(#arrowhead)" />
+         <text x="85" y="85" font-weight="bold" font-size="2em">A</text>
+         <text x="85" y="210" font-weight="bold" font-size="2em">0</text>
+         <text x="275" y="210" font-weight="bold" font-size="2em">1</text>
+         <text x="265" y="85" font-weight="bold" font-size="2em">B</text>
+         <text x="175" y="20" font-weight="bold" font-size="2em">1</text>
+         <text x="175" y="155" font-weight="bold" font-size="2em">0</text>
+         Ocorreu um problema, seu navegadoe não suporta SVG em linhas.
+      </svg>
+   </body>
+</html>
