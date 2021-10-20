@@ -1,0 +1,64 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+      <!-- external css -->
+      <link rel="stylesheet" href="css/guias.css">
+      <title>Conceito de Jogos</title>
+      <!-- internal css -->
+      <style>
+         body {
+            font-family: Arial;
+         }
+         .p {
+            font-size: 15px;
+         }
+      </style>
+   </head>
+   <body>
+      <main>
+         <h1><strong>Marcha das Relíquias</strong></h1>
+         <h2>Conceito do Jogo</h4>
+         <!-- inline css -->
+         <p>Esse jogo é um jogo de estratégia, onde seu objetivo é construir um compania de soldados para marchar e conquistar uma relíquia. O jogo é dividido em 3 fases: <a onclick="openTab(event, 'fase1')" style="color: black;">Preparação</a>, <a onclick="openTab(event, 'fase2')" style="color: black;">Marcha</a> e <a onclick="openTab(event, 'fase3')" style="color: black;">Conquista</a></p>
+         <div class="guia">
+            <button class="link" onclick="openTab(event, 'fase1')">Preparação</button>
+            <button class="link" onclick="openTab(event, 'fase2')">Marcha</button>
+            <button class="link" onclick="openTab(event, 'fase3')">Conquista</button>
+         </div>
+      </main>
+      <!-- inline css -->
+      <div id="fase1" class="conteudo" style="background-color: lightgray;">
+         <h3>Preparação</h3>
+         <p>Nessa fase o jogador deve juntar tropas e recurços para sua jornada.</p>
+         <p>Ele também pode treinar para ficar mais forte ou conseguir informações sobre a relíquia.</p>
+      </div>
+      <!-- inline css -->
+      <div id="fase2" class="conteudo" style="background-color: lightyellow;">
+         <h3>Marcha</h3>
+         <p>Nessa fase o jogador vai fazer sua jornada escolhendo por onde vai passar, ela acaba quando alcançar a região da relíquia.</p>
+         <p>Ele ainda pode conseguir buscar mais informações da relíquia, porém ele só ficará mais forte ganhando batahas.</p>
+      </div>
+      <!-- inline css -->
+      <div id="fase3" class="conteudo" style="background-color: lightskyblue;">
+         <h3>Conquista</h3>
+         <p>Nessa fase ele deve conquistar a região e localizar a relíquia.</p>
+      </div>
+      <script>
+         function openTab(evt, tabName) {
+           var i, tabcontent, tablinks;
+           tabcontent = document.getElementsByClassName("conteudo");
+           for (i = 0; i < tabcontent.length; i++) {
+             tabcontent[i].style.display = "none";
+           }
+           tablinks = document.getElementsByClassName("link");
+           for (i = 0; i < tablinks.length; i++) {
+             tablinks[i].className = tablinks[i].className.replace(" active", "");
+           }
+           document.getElementById(tabName).style.display = "block";
+           evt.currentTarget.className += " active";
+         }
+
+         openTab(evt, 'fase1');
+         </script>
+   </body>
+</html>

@@ -1,0 +1,104 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+      <!-- external css -->
+      <link rel="stylesheet" href="css/guias.css">
+      <title>Conceito de Jogos</title>
+      <!-- internal css -->
+      <style>
+         body {
+            font-family: Arial;
+         }
+         .guia {
+            overflow: hidden;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+         }
+         .guia button {
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.3s;
+            font-size: 17px;
+         }
+         .guia button:hover {
+            background-color: #ddd;
+         }
+         .guia button.active {
+            background-color: #ccc;
+         }
+         .guia button.active::first-letter{
+            color:red;
+         }
+         .conteudo {
+            display: none;
+            padding: 6px 12px;
+            border: 1px solid #ccc;
+            border-top: none;
+         }
+         .conteudo > p {
+            font-size: 15px;
+         }
+         h3[class="titulo"]{
+            font-size: 30px;
+         }
+         #fase1{
+            background-color: lightgray;
+         }
+         #fase2{
+            background-color: lightgreen;
+         }
+         #fase3{
+            background-color: lightblue;
+         }
+      </style>
+   </head>
+   <body>
+      <main>
+         <h1><strong>Marcha das Relíquias</strong></h1>
+         <h2>Conceito do Jogo</h4>
+         <!-- inline css -->
+         <p>Esse jogo é um jogo de estratégia, onde seu objetivo é construir um compania de soldados para marchar e conquistar uma relíquia. O jogo é dividido em 3 fases: <a onclick="openTab(event, 'fase1')" style="color: black;">Preparação</a>, <a onclick="openTab(event, 'fase2')" style="color: black;">Marcha</a> e <a onclick="openTab(event, 'fase3')" style="color: black;">Conquista</a></p>
+         <div class="guia">
+            <button class="link" onclick="openTab(event, 'fase1')">Preparação</button>
+            <button class="link" onclick="openTab(event, 'fase2')">Marcha</button>
+            <button class="link" onclick="openTab(event, 'fase3')">Conquista</button>
+         </div>
+      </main>
+      <!-- inline css -->
+      <div id="fase1" class="conteudo">
+         <h3 class="titulo" >Preparação</h3>
+         <p>Nessa fase o jogador deve juntar tropas e recurços para sua jornada.</p>
+         <p>Ele também pode treinar para ficar mais forte ou conseguir informações sobre a relíquia.</p>
+      </div>
+      <!-- inline css -->
+      <div id="fase2" class="conteudo">
+         <h3 class="titulo">Marcha</h3>
+         <p>Nessa fase o jogador vai fazer sua jornada escolhendo por onde vai passar, ela acaba quando alcançar a região da relíquia.</p>
+         <p>Ele ainda pode conseguir buscar mais informações da relíquia, porém ele só ficará mais forte ganhando batahas.</p>
+      </div>
+      <!-- inline css -->
+      <div id="fase3" class="conteudo">
+         <h3 class="titulo">Conquista</h3>
+         <p>Nessa fase ele deve conquistar a região e localizar a relíquia.</p>
+      </div>
+      <script>
+         function openTab(evt, tabName) {
+           var i, tabcontent, tablinks;
+           tabcontent = document.getElementsByClassName("conteudo");
+           for (i = 0; i < tabcontent.length; i++) {
+             tabcontent[i].style.display = "none";
+           }
+           tablinks = document.getElementsByClassName("link");
+           for (i = 0; i < tablinks.length; i++) {
+             tablinks[i].className = tablinks[i].className.replace(" active", "");
+           }
+           document.getElementById(tabName).style.display = "block";
+           evt.currentTarget.className += " active";
+         }
+         </script>
+   </body>
+</html>
