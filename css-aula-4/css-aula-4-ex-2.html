@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+      <style>
+         p.dotted {border-style: dotted;}
+         p.dashed {border-style: dashed;}
+         p.solid {border-style: solid;}
+         p.double {border-style: double;}
+         p.groove {border-style: groove;}
+         p.ridge {border-style: ridge;}
+         p.inset {border-style: inset;}
+         p.outset {border-style: outset;}
+         p.none {border-style: none;}
+         p.hidden {border-style: hidden;}
+         p.blue{border-color: blue;}
+         p.yellow{border-color: yellow;}
+         p.red{border-color: red;}
+         p.green{border-color: green;}
+         p.tamanhoigual{border-width: 0.5em;}
+         p.pares{border-width: 10px 1em;}
+         p.diferentes{border-width: 15px 0.5em 1em 10px;}
+      </style>
+   </head>
+   <body>
+      <main>
+         <h1>Gerador de Bordas</h1>
+         <fieldset>
+            <legend>Opções</legend>
+            <label for="tipos">Tipo de borda: </label>
+            <input type="radio" name="tipo" value="dotted">Pontilhado</input>
+            <input type="radio" name="tipo" value="dashed">Traçado</input>
+            <input type="radio" name="tipo" value="solid">Sólida</input>
+            <input type="radio" name="tipo" value="double">Dupla</input>
+            <input type="radio" name="tipo" value="groove">Groove</input>
+            <input type="radio" name="tipo" value="ridge">Ridge</input>
+            <input type="radio" name="tipo" value="inset">Inset</input>
+            <input type="radio" name="tipo" value="outset">Outset</input>
+            <input type="radio" name="tipo" value="hidden">Escondida</input>
+            <input type="radio" name="tipo" value="none" checked="checked">Sem Borda</input>
+            <br />
+            <label for="cores">Selecione a cor: </label>
+            <input type="radio" name="cor" value="blue">Azul</input>
+            <input type="radio" name="cor" value="yellow">Amarelo</input>
+            <input type="radio" name="cor" value="red">Vermelho</input>
+            <input type="radio" name="cor" value="green">Verde</input>
+            <input type="radio" name="cor" value="preto" checked="checked">Preto</input>
+            <br />
+            <label for="tamanhos">Expressura:</label>
+            <input type="radio" name="expressura" value="0" checked="checked">Uniforme</input>
+            <input type="radio" name="expressura" value="1">Em Pares</input>
+            <input type="radio" name="expressura" value="2">Todos Diferentes</input>
+            <br />
+            <label for="curva">Curvatura da borda (deixe 0 para nenhuma):</label>
+            <input type="number" name="curva" id="curva" value="0">
+            <br />
+            <button onclick="gerarcss(curva.value)">Gerar</button>
+         </fieldset>
+         <div id="resultado"></div>
+         <script>
+            function gerarcss (curva){
+               var divnova = document.createElement("p");
+               var conteudo = ".borda{<br />"
+               var tipoborda = gettipoborda();
+               var cor = getcor ();
+               var expressura = getexpressura ();
+
+               divnova.id = "conteudobordado"
+               conteudo += "   border-style: " + tipoborda + ";<br />";
+               divnova.className = tipoborda;
+
+               if (cor != "preto"){
+                  conteudo += "   border-color: " + cor + ";<br />";
+                  divnova.className += " " + cor;
+               }
+
+               switch (expressura){
+                  case 0:
+                     conteudo += "   border-width: 0.5em;<br />";
+                     divnova.className += " tamanhoigual";
+                     break;
+                  case 1:
+                     conteudo += "   border-width: 10px 1em;<br />";
+                     divnova.className += " pares";
+                     break;
+                  case 2:
+                     conteudo += "   border-width: 15px 0.5em 1em 10px;<br />";
+                     divnova.className += " diferentes";
+                     break;
+               }
+
+               if (curva != 0){
+                  conteudo += "border-radius: " + curva + ";<br />";
+                  divnova.style = "border-radius: " + curva + "px;";
+               }
+
+               conteudo += "}";
+               divnova.innerHTML = conteudo;
+               document.getElementById("resultado").appendChild(divnova);
+            }
+
+            function gettipoborda(){
+               var radios = document.getElementsByName('tipo');
+               for (var i = 0, length = radios.length; i < length; i++) {
+                  if (radios[i].checked) {
+                     return radios[i].value;
+                  }
+               }
+            }
+
+            function getcor (){
+               var radios = document.getElementsByName('cor');
+               for (var i = 0, length = radios.length; i < length; i++) {
+                  if (radios[i].checked) {
+                     return radios[i].value;
+                  }
+               }
+            }
+
+            function getexpressura (){
+               var radios = document.getElementsByName('expressura');
+               for (var i = 0, length = radios.length; i < length; i++) {
+                  if (radios[i].checked) {
+                     return radios[i].value;
+                  }
+               }
+            }
+         </script>
+      </main>
+   </body>
+</html>

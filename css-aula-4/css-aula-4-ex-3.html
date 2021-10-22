@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+      <style>
+         button{
+            border-radius: 50%;
+            border-style: solid;
+            background-color: blue;
+            width: 20em;
+            height: 20em;
+            box-shadow: 10px 10px black;
+         }
+         .estetica{
+            border-radius: 50%;
+            border-style: solid;
+            background-color: red;
+            width: 20em;
+            height: 12.5em;
+            box-shadow: 10px 10px black;
+            padding-top: 5em;
+            text-align: center;
+         }
+      </style>
+   </head>
+   <body>
+      <main>
+         <div id="principal" ><button onclick="mudar()">Press here to <br /><strong>Escape</strong></button></div>
+      </main>
+      <script>
+         function mudar(){
+            document.getElementById("principal").innerHTML = '<p class="estetica">There is no <br /><strong>Escape</strong></p>'
+         }
+      </script>
+   </body>
+</html>
