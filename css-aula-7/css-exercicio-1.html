@@ -1,0 +1,84 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+      <style>
+            button{
+                border-radius: 50%;
+                border-color: black;
+                border-width: thick;
+                height: 10em;
+                width: 10em;
+                flex: 1;
+            }
+            h1{
+                text-align: center;
+                font-size: 5em;
+            }
+            div{
+                text-align: center;
+                width: 100%;
+                flex: 1;
+            }
+      </style>
+   </head>
+   <body>
+      <main id="main" style="background-color: white;">
+            <h1>Cores Hexadecimais</h1>
+            <div>
+                <button id="hex1" style="background-color: #EE0077;" onclick="mudarcor('#EE0077')"></button>
+                <button id="hex2" style="background-color: #66c2b3;" onclick="mudarcor('#66c2b3')"></button>
+                <button id="hex3" style="background-color: #cfaf47;" onclick="mudarcor('#cfaf47')"></button>
+            </div>
+            <h1>Cores Hexadecimais com transparência</h1>
+            <div>
+                <button id="hexa1" style="background-color: #9beb40ff;" onclick="mudarcor('#9beb40ff')"></button>
+                <button id="hexa2" style="background-color: #9beb4077;" onclick="mudarcor('#9beb4077')"></button>
+                <button id="hexa3" style="background-color: #9beb4000;" onclick="mudarcor('#9beb4000')"></button>
+            </div>
+            <h1>Cores rgb</h1>
+            <div>
+                <button id="rgb1" style = "background-color: rgb(104, 33, 204);" onclick="mudarcor('rgb(104, 33, 204)')"></button>
+                <button id="rgb2" style = "background-color: rgb(204, 104, 33);" onclick="mudarcor('rgb(204, 104, 33)')"></button>
+                <button id="rgb3" style = "background-color: rgb(33, 204, 104);" onclick="mudarcor('rgb(33, 204, 104)')"></button>
+            </div>
+            <h1>Cores rgba</h1>
+            <div>
+                <button id="rgba1" style = "background-color: rgba(104, 33, 204, 0.9);" onclick="mudarcor('rgba(104, 33, 204, 0.9)')"></button>
+                <button id="rgba2" style = "background-color: rgba(104, 33, 204, 0.6);" onclick="mudarcor('rgba(104, 33, 204, 0.6)')"></button>
+                <button id="rgba3" style = "background-color: rgba(104, 33, 204, 0.3);" onclick="mudarcor('rgba(104, 33, 204, 0.3)')"></button>
+            </div>
+            <h1>Cores hsl</h1>
+            <div>
+                <button id="hsl1" style = "background-color: hsl(10, 100%, 50%);" onclick="mudarcor('hsl(10, 100%, 50%)')"></button>
+                <button id="hsl2" style = "background-color: hsl(60, 100%, 100%);" onclick="mudarcor('hsl(60, 100%, 100%)')"></button>
+                <button id="hsl3" style = "background-color: hsl(120, 100%, 25%);" onclick="mudarcor('hsl(120, 100%, 25%)')"></button>
+            </div>
+            <h1>Cores hsla</h1>
+            <div>
+                <button id="hsla1" style = "background-color: hsla(10, 100%, 50%, 0.9);" onclick="mudarcor('hsla(10, 100%, 50%, 0.9)')"></button>
+                <button id="hsla2" style = "background-color: hsla(10, 100%, 50%, 0.6);" onclick="mudarcor('hsla(10, 100%, 50%, 0.6)')"></button>
+                <button id="hsla3" style = "background-color: hsla(10, 100%, 50%, 0.3);" onclick="mudarcor('hsla(10, 100%, 50%, 0.3)')"></button>
+            </div>
+            <h1>Cores Padrões</h1>
+            <div>
+                <button id="aqua" style = "background-color: aquamarine;" onclick="mudarcor('aquamarine')"></button>
+                <button id="violet" style = "background-color: blueviolet;" onclick="mudarcor('blueviolet')"></button>
+                <button id="gold" style = "background-color: gold;" onclick="mudarcor('gold')"></button>
+            </div>
+            <h1>Cor Atual</h1>
+            <div>
+                <button id="atual" style = "background-color: currentcolor;" onclick="mudarcor('currentcolor')"></button>
+            </div>
+            <h1>Resetar</h1>
+            <div>
+                <button id="reset" style = "background-color: white;" onclick="mudarcor('white')">Resetar</button>
+            </div>
+      </main>
+      <script>
+            function mudarcor (color){
+                console.log(color);
+                document.getElementById("main").style.backgroundColor = color;
+            }
+      </script>
+    </body>
+</html>
