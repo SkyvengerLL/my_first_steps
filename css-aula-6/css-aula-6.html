@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+      <title>Texto Teste</title>
+      <style>
+         h1{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4em;
+            text-shadow: black;
+         }
+         .box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 35em;
+            width: 100%;
+         }
+         .centralizado{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+         }
+         .verdicalizado{
+            display: flex;
+            align-items: stretch;
+            justify-content: center;
+            flex-wrap: wrap;
+            flex-direction: column;
+         }
+         .horizontalizado{
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            align-items: stretch;
+         }
+         button{
+            width: 5em;
+            height: 5em;
+            border-width: 0.5em;
+            border-radius: 50%;
+         }
+      </style>
+   </head>
+   <body>
+      <main>
+         <h1>Imagem Centralizada</h1>
+         <div class="box">
+            <img src="imagens/dog.jpg" alt="fleximg" />
+         </div>
+         <h1>Itens centralizados no centro</h1>
+         <div class="centralizado">
+            <button style="background-color: blue;">circulo 1</button>
+            <button style="background-color: red;">circulo 2</button>
+            <button style="background-color: green;">circulo 3</button>
+         </div>
+         <h1>Itens centralizados na verdical</h1>
+         <div class="verdicalizado">
+            <button style="background-color: green;">circulo 1</button>
+            <button style="background-color: blue;">circulo 2</button>
+            <button style="background-color: red;">circulo 3</button>
+         </div>
+         <h1>Itens centralizados na horizontal</h1>
+         <div class="horizontalizado">
+            <button style="background-color: red;">circulo 1</button>
+            <button style="background-color: green;">circulo 2</button>
+            <button style="background-color: blue;">circulo 3</button>
+         </div>
+      </main>
+   </body>
+</html>
