@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+      <title>Texto Teste</title>
+      <style>
+         .semwrap{
+            width:240px;
+            height:100px;
+            display:flex;
+            flex-wrap:nowrap;
+         }
+         .wrapbasico{
+            width:240px;
+            height:300px;
+            display:flex;
+            flex-wrap:wrap;
+         }
+         .wrapreverso{
+            width:240px;
+            height:300px;
+            display:flex;
+            flex-wrap:wrap-reverse;
+         }
+         .wrapinicial{
+            width:240px;
+            height:100px;
+            display:flex;
+            flex-wrap:initial;
+         }
+         .mes{
+            border:2px solid black; 
+            background-color: yellow;
+            width: 240px; 
+            height: 40px;
+            font-size: 2em;
+            text-align: center;
+         }
+         .dia{
+            border:2px solid black; 
+            width: 30px; 
+            height: 40px;
+         }
+         .setimo{
+            color: rgb(230, 26, 26);
+         }
+         .semana{
+            font-weight: bold;
+            background-color: yellow;
+         }
+      </style>
+   </head>
+   <body>
+      <main>
+         <h1>Um calendário usando wrap</h1>
+         <h2>Sem usar wrap</h2>
+         <div class="semwrap">
+            <div class="mes"><strong>Mês</strong><br /></div>
+            <div class="dia semana">Dom.</div>
+            <div class="dia semana">Seg.</div>
+            <div class="dia semana">Ter.</div>
+            <div class="dia semana">Qua.</div>
+            <div class="dia semana">Qui.</div>
+            <div class="dia semana">Sex.</div>
+            <div class="dia semana setimo">Sab.</div>
+            <div class="dia">01</div>
+            <div class="dia">02</div>
+            <div class="dia">03</div>
+            <div class="dia">04</div>
+            <div class="dia">05</div>
+            <div class="dia">06</div>
+            <div class="dia setimo">07</div>
+            <div class="dia">08</div>
+            <div class="dia">09</div>
+            <div class="dia">10</div>
+            <div class="dia">11</div>
+            <div class="dia">12</div>
+            <div class="dia">13</div>
+            <div class="dia setimo">14</div>
+            <div class="dia">15</div>
+            <div class="dia">16</div>
+            <div class="dia">17</div>
+            <div class="dia">18</div>
+            <div class="dia">19</div>
+            <div class="dia">20</div>
+            <div class="dia setimo">21</div>
+            <div class="dia">22</div>
+            <div class="dia">23</div>
+            <div class="dia">24</div>
+            <div class="dia">25</div>
+            <div class="dia">26</div>
+            <div class="dia">27</div>
+            <div class="dia setimo">28</div>
+            <div class="dia">29</div>
+            <div class="dia">30</div>
+            <div class="dia">31</div>
+         </div>
+         <h2>Usando wrap</h2>
+         <div class="wrapbasico">
+            <div class="mes"><strong>Mês</strong><br /></div>
+            <div class="dia semana">Dom.</div>
+            <div class="dia semana">Seg.</div>
+            <div class="dia semana">Ter.</div>
+            <div class="dia semana">Qua.</div>
+            <div class="dia semana">Qui.</div>
+            <div class="dia semana">Sex.</div>
+            <div class="dia semana setimo">Sab.</div>
+            <div class="dia">01</div>
+            <div class="dia">02</div>
+            <div class="dia">03</div>
+            <div class="dia">04</div>
+            <div class="dia">05</div>
+            <div class="dia">06</div>
+            <div class="dia setimo">07</div>
+            <div class="dia">08</div>
+            <div class="dia">09</div>
+            <div class="dia">10</div>
+            <div class="dia">11</div>
+            <div class="dia">12</div>
+            <div class="dia">13</div>
+            <div class="dia setimo">14</div>
+            <div class="dia">15</div>
+            <div class="dia">16</div>
+            <div class="dia">17</div>
+            <div class="dia">18</div>
+            <div class="dia">19</div>
+            <div class="dia">20</div>
+            <div class="dia setimo">21</div>
+            <div class="dia">22</div>
+            <div class="dia">23</div>
+            <div class="dia">24</div>
+            <div class="dia">25</div>
+            <div class="dia">26</div>
+            <div class="dia">27</div>
+            <div class="dia setimo">28</div>
+            <div class="dia">29</div>
+            <div class="dia">30</div>
+            <div class="dia">31</div>
+         </div>
+         <h2>Wrap reverso</h2>
+         <div class="wrapreverso">
+            <div class="mes"><strong>Mês</strong><br /></div>
+            <div class="dia semana">Dom.</div>
+            <div class="dia semana">Seg.</div>
+            <div class="dia semana">Ter.</div>
+            <div class="dia semana">Qua.</div>
+            <div class="dia semana">Qui.</div>
+            <div class="dia semana">Sex.</div>
+            <div class="dia semana setimo">Sab.</div>
+            <div class="dia">01</div>
+            <div class="dia">02</div>
+            <div class="dia">03</div>
+            <div class="dia">04</div>
+            <div class="dia">05</div>
+            <div class="dia">06</div>
+            <div class="dia setimo">07</div>
+            <div class="dia">08</div>
+            <div class="dia">09</div>
+            <div class="dia">10</div>
+            <div class="dia">11</div>
+            <div class="dia">12</div>
+            <div class="dia">13</div>
+            <div class="dia setimo">14</div>
+            <div class="dia">15</div>
+            <div class="dia">16</div>
+            <div class="dia">17</div>
+            <div class="dia">18</div>
+            <div class="dia">19</div>
+            <div class="dia">20</div>
+            <div class="dia setimo">21</div>
+            <div class="dia">22</div>
+            <div class="dia">23</div>
+            <div class="dia">24</div>
+            <div class="dia">25</div>
+            <div class="dia">26</div>
+            <div class="dia">27</div>
+            <div class="dia setimo">28</div>
+            <div class="dia">29</div>
+            <div class="dia">30</div>
+            <div class="dia">31</div>
+         </div>
+         <h2>Usando wrap initial</h2>
+         <div class="wrapinicial">
+            <div class="mes"><strong>Mês</strong><br /></div>
+            <div class="dia semana">Dom.</div>
+            <div class="dia semana">Seg.</div>
+            <div class="dia semana">Ter.</div>
+            <div class="dia semana">Qua.</div>
+            <div class="dia semana">Qui.</div>
+            <div class="dia semana">Sex.</div>
+            <div class="dia semana setimo">Sab.</div>
+            <div class="dia">01</div>
+            <div class="dia">02</div>
+            <div class="dia">03</div>
+            <div class="dia">04</div>
+            <div class="dia">05</div>
+            <div class="dia">06</div>
+            <div class="dia setimo">07</div>
+            <div class="dia">08</div>
+            <div class="dia">09</div>
+            <div class="dia">10</div>
+            <div class="dia">11</div>
+            <div class="dia">12</div>
+            <div class="dia">13</div>
+            <div class="dia setimo">14</div>
+            <div class="dia">15</div>
+            <div class="dia">16</div>
+            <div class="dia">17</div>
+            <div class="dia">18</div>
+            <div class="dia">19</div>
+            <div class="dia">20</div>
+            <div class="dia setimo">21</div>
+            <div class="dia">22</div>
+            <div class="dia">23</div>
+            <div class="dia">24</div>
+            <div class="dia">25</div>
+            <div class="dia">26</div>
+            <div class="dia">27</div>
+            <div class="dia setimo">28</div>
+            <div class="dia">29</div>
+            <div class="dia">30</div>
+            <div class="dia">31</div>
+         </div>
+      </main>
+   </body>
+</html>
